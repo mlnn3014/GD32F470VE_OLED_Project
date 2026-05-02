@@ -1,12 +1,12 @@
-#/*!
+/*!
     \file    gd32f4xx.h
     \brief   general definitions for GD32F4xx
     
-    \version 2024-12-20, V3.3.1, firmware for GD32F4xx  
+    \version 2026-02-05, V3.3.3, firmware for GD32F4xx  
 */
 
 /* Copyright (c) 2012 ARM LIMITED
-   Copyright (c) 2024, GigaDevice Semiconductor Inc.
+   Copyright (c) 2026, GigaDevice Semiconductor Inc.
 
    All rights reserved.
    Redistribution and use in source and binary forms, with or without
@@ -91,8 +91,8 @@
 
 /* GD32F4xx firmware library version number V1.0 */
 #define __GD32F4xx_STDPERIPH_VERSION_MAIN   (0x03) /*!< [31:24] main version     */
-#define __GD32F4xx_STDPERIPH_VERSION_SUB1   (0x00) /*!< [23:16] sub1 version     */
-#define __GD32F4xx_STDPERIPH_VERSION_SUB2   (0x00) /*!< [15:8]  sub2 version     */
+#define __GD32F4xx_STDPERIPH_VERSION_SUB1   (0x03) /*!< [23:16] sub1 version     */
+#define __GD32F4xx_STDPERIPH_VERSION_SUB2   (0x03) /*!< [15:8]  sub2 version     */
 #define __GD32F4xx_STDPERIPH_VERSION_RC     (0x00) /*!< [7:0]  release candidate */ 
 #define __GD32F4xx_STDPERIPH_VERSION        ((__GD32F4xx_STDPERIPH_VERSION_MAIN << 24)\
                                             |(__GD32F4xx_STDPERIPH_VERSION_SUB1 << 16)\
@@ -109,7 +109,8 @@
 typedef enum IRQn
 {
     /* cortex-M4 processor exceptions numbers */
-    NonMaskableInt_IRQn          = -14,    /*!< 2 non maskable interrupt                                 */
+    NonMaskableInt_IRQn          = -14,    /*!< non maskable interrupt                                   */
+    HardFault_IRQn               = -13,    /*!< hard-fault interrupt                                     */
     MemoryManagement_IRQn        = -12,    /*!< 4 cortex-M4 memory management interrupt                  */
     BusFault_IRQn                = -11,    /*!< 5 cortex-M4 bus fault interrupt                          */
     UsageFault_IRQn              = -10,    /*!< 6 cortex-M4 usage fault interrupt                        */

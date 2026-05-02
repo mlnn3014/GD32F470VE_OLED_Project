@@ -8,13 +8,7 @@ virtualFolder:
   name: <virtual_root>
   files: []
   folders:
-    - name: Core
-      files:
-        - path: Core/Src/gd32f4xx_it.c
-        - path: Core/Src/main.c
-        - path: Core/Src/systick.c
-      folders: []
-    - name: Application
+    - name: App
       files:
         - path: App/Src/adc_app.c
         - path: App/Src/btn_app.c
@@ -25,17 +19,56 @@ virtualFolder:
         - path: App/Src/sd_app.c
         - path: App/Src/usart_app.c
       folders: []
-    - name: Board Support Package
+    - name: Core
+      files:
+        - path: Core/Src/main.c
+        - path: Core/Src/systick.c
+        - path: Core/Src/gd32f4xx_it.c
+        - path: Firmware/CMSIS/GD/GD32F4xx/Source/system_gd32f4xx.c
+      folders: []
+    - name: Bsp
+      files:
+        - path: Bsp/Src/led_bsp.c
+      folders: []
+    - name: Components
+      files: []
+      folders:
+        - name: bsp
+          files:
+            - path: Compenents/bsp/mcu_cmic_gd32f470vet6.c
+          folders: []
+        - name: gd25qxx
+          files:
+            - path: Compenents/gd25qxx/gd25qxx.c
+            - path: Compenents/gd25qxx/lfs.c
+            - path: Compenents/gd25qxx/lfs_port.c
+            - path: Compenents/gd25qxx/lfs_util.c
+          folders: []
+        - name: gd30ad3344
+          files:
+            - path: Compenents/gd30ad3344/gd30ad3344.c
+          folders: []
+        - name: oled
+          files:
+            - path: Compenents/oled/oled.c
+          folders: []
+        - name: ebtn
+          files:
+            - path: Compenents/ebtn/ebtn.c
+          folders: []
+        - name: sdio
+          files:
+            - path: Compenents/sdio/sdio_sdcard.c
+          folders: []
+        - name: fatfs
+          files:
+            - path: Compenents/fatfs/diskio.c
+            - path: Compenents/fatfs/ff.c
+          folders: []
+    - name: Middleware
       files: []
       folders: []
-    - name: Device
-      files:
-        - path: Core/Src/systick.c
-        - path: Firmware/CMSIS/GD/GD32F4xx/Source/system_gd32f4xx.c
-        - path: Core/Src/gd32f4xx_it.c
-        - path: Firmware/startup/startup_gd32f450_470.s
-      folders: []
-    - name: StdPeriph Drivers
+    - name: Firmware
       files:
         - path: Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_adc.c
         - path: Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_can.c
@@ -67,48 +100,17 @@ virtualFolder:
         - path: Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_usart.c
         - path: Firmware/GD32F4xx_standard_peripheral/Source/gd32f4xx_wwdgt.c
       folders: []
-    - name: Components
-      files: []
-      folders:
-        - name: bsp
-          files:
-            - path: Libraries/bsp/mcu_cmic_gd32f470vet6.c
-          folders: []
-        - name: gd25qxx
-          files:
-            - path: Libraries/gd25qxx/gd25qxx.c
-            - path: Libraries/gd25qxx/lfs.c
-            - path: Libraries/gd25qxx/lfs_port.c
-            - path: Libraries/gd25qxx/lfs_util.c
-          folders: []
-        - name: gd30ad3344
-          files:
-            - path: Libraries/gd30ad3344/gd30ad3344.c
-          folders: []
-        - name: oled
-          files:
-            - path: Libraries/oled/oled.c
-          folders: []
-        - name: ebtn
-          files:
-            - path: Libraries/ebtn/ebtn.c
-          folders: []
-        - name: sdio
-          files:
-            - path: Libraries/sdio/sdio_sdcard.c
-          folders: []
-        - name: fatfs
-          files:
-            - path: Libraries/fatfs/diskio.c
-            - path: Libraries/fatfs/ff.c
-          folders: []
+    - name: Startup
+      files:
+        - path: Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f407_427.s
+      folders: []
     - name: ::CMSIS
       files: []
       folders: []
 dependenceList: []
 outDir: build
 miscInfo:
-  uid: a8b95ac1a4c86a201ceb9599d00e4725
+  uid: b69946ae4824dd114484802d9a5435ec
 targets:
   GD32F470VET6_Project:
     cppPreprocessAttrs:
@@ -119,13 +121,14 @@ targets:
       incList:
         - Core/Inc
         - App/Inc
-        - Libraries/bsp
-        - Libraries/gd30ad3344
-        - Libraries/oled
-        - Libraries/gd25qxx
-        - Libraries/ebtn
-        - Libraries/sdio
-        - Libraries/fatfs
+        - Bsp/Inc
+        - Compenents/bsp
+        - Compenents/gd30ad3344
+        - Compenents/oled
+        - Compenents/gd25qxx
+        - Compenents/ebtn
+        - Compenents/sdio
+        - Compenents/fatfs
         - Firmware/GD32F4xx_standard_peripheral/Include
         - Firmware/CMSIS_5/CMSIS/Core/Include
         - Firmware/CMSIS

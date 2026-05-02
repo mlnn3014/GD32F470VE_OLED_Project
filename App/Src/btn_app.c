@@ -8,8 +8,6 @@
 #include "mcu_cmic_gd32f470vet6.h"
 
 
-extern uint8_t ucLed[6];
-
 typedef enum
 {
     USER_BUTTON_0 = 0,
@@ -77,25 +75,25 @@ void prv_btn_event(struct ebtn_btn *btn, ebtn_evt_t evt)
         switch (btn->key_id)
         {
         case USER_BUTTON_0:
-            LED1_TOGGLE;
+            led_toggle(LED_1);
             break;
         case USER_BUTTON_1:
-            LED2_TOGGLE;
+            led_toggle(LED_2);
             break;
         case USER_BUTTON_2:
-            LED3_TOGGLE;
+            led_toggle(LED_3);
             break;
         case USER_BUTTON_3:
-            LED4_TOGGLE;
+            led_toggle(LED_4);
             break;
         case USER_BUTTON_4:
-            LED5_TOGGLE;
+            led_toggle(LED_5);
             break;
         case USER_BUTTON_5:
-            LED6_TOGGLE;
+            led_toggle(LED_6);
             break;
         case USER_BUTTON_6:
-            LED6_TOGGLE;
+            led_toggle(LED_6);
             break;
         default:
             break;

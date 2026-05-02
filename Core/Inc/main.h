@@ -2,11 +2,11 @@
     \file    main.h
     \brief   the header file of main
 
-    \version 2024-12-20, V3.3.1, firmware for GD32F4xx
+    \version 2026-02-05, V3.3.3, firmware for GD32F4xx
 */
 
 /*
-    Copyright (c) 2024, GigaDevice Semiconductor Inc.
+    Copyright (c) 2026, GigaDevice Semiconductor Inc.
 
     Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -36,6 +36,7 @@ OF SUCH DAMAGE.
 #define __MAIN_H
 
 /* led spark function */
+void led_spark(void);
 
 #endif /* __MAIN_H */
 

@@ -5,7 +5,7 @@
 */
 
 /* Copyright (c) 2012 ARM LIMITED
-   Copyright (c) 2024, GigaDevice Semiconductor Inc.
+   Copyright (c) 2026, GigaDevice Semiconductor Inc.
 
    All rights reserved.
    Redistribution and use in source and binary forms, with or without
@@ -41,15 +41,20 @@
 #define __HXTAL           (HXTAL_VALUE)             /* high speed crystal oscillator frequency */
 #define __SYS_OSC_CLK     (__IRC16M)                /* main oscillator frequency */
 
+#define VECT_TAB_OFFSET  (uint32_t)0x00             /* vector table base offset */
+
 /* select a system clock by uncommenting the following line */
 //#define __SYSTEM_CLOCK_IRC16M                   (uint32_t)(__IRC16M)
 //#define __SYSTEM_CLOCK_HXTAL                    (uint32_t)(__HXTAL)
 //#define __SYSTEM_CLOCK_120M_PLL_IRC16M          (uint32_t)(120000000)
 //#define __SYSTEM_CLOCK_120M_PLL_8M_HXTAL        (uint32_t)(120000000)
 //#define __SYSTEM_CLOCK_120M_PLL_25M_HXTAL       (uint32_t)(120000000)
+
+#if defined (GD32F405) || defined (GD32F407)
 //#define __SYSTEM_CLOCK_168M_PLL_IRC16M          (uint32_t)(168000000)
 //#define __SYSTEM_CLOCK_168M_PLL_8M_HXTAL        (uint32_t)(168000000)
-//#define __SYSTEM_CLOCK_168M_PLL_25M_HXTAL       (uint32_t)(168000000)
+#define __SYSTEM_CLOCK_168M_PLL_25M_HXTAL       (uint32_t)(168000000)
+#endif
 
 #if defined (GD32F450) || defined (GD32F425) || defined (GD32F427)
 //#define __SYSTEM_CLOCK_200M_PLL_IRC16M          (uint32_t)(200000000)
@@ -187,10 +192,10 @@ void SystemInit (void)
     if(((RCU_CFG0 & RCU_CFG0_SCSS) == RCU_SCSS_PLLP)){
         RCU_MODIFY_4(0x50);
     }
-    _soft_delay_(200);
-    
+
     RCU_CFG0 &= ~RCU_CFG0_SCS;
-    
+    _soft_delay_(200);
+
     /* Reset HXTALEN, CKMEN and PLLEN bits */
     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
 
@@ -213,6 +218,12 @@ void SystemInit (void)
     /* Configure the System clock source, PLL Multiplier and Divider factors, 
         AHB/APBx prescalers and Flash settings */
     system_clock_config();
+
+#ifdef VECT_TAB_SRAM
+    nvic_vector_table_set(NVIC_VECTTAB_RAM, VECT_TAB_OFFSET);
+#else
+    nvic_vector_table_set(NVIC_VECTTAB_FLASH, VECT_TAB_OFFSET);
+#endif
 }
 /*!
     \brief      configure the system clock

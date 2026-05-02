@@ -2,16 +2,9 @@
 
 int main(void)
 {
-#ifdef __FIRMWARE_VERSION_DEFINE
-    uint32_t fw_ver = 0;
-#endif
     systick_config();
 
-#ifdef __FIRMWARE_VERSION_DEFINE
-    fw_ver = gd32f4xx_firmware_version_get();
-#endif /* __FIRMWARE_VERSION_DEFINE */
-
-    bsp_led_init();
+    led_init();
     bsp_btn_init();
     bsp_oled_init();
     bsp_gd25qxx_init();

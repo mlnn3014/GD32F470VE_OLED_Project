@@ -1,20 +1,12 @@
-/* Licence
-* Company: MCUSTUDIO
-* Auther: Ahypnis.
-* Version: V0.10
-* Time: 2025/06/05
-* Note:
-*/
 #include "mcu_cmic_gd32f470vet6.h"
 
 typedef struct {
-    void (*task_handler)(void);
+    void (*run)(void);
     uint32_t period_ms;
-    uint32_t last_run_ms;
-} scheduler_task_t;
+    uint32_t last_ms;
+} task_t;
 
-/* Static task table: function pointer, run period in ms, and last run time. */
-static scheduler_task_t scheduler_tasks[] =
+static task_t tasks[] =
 {
     {led_task,  1U,   0U},
     {adc_task,  100U, 0U},
@@ -24,38 +16,28 @@ static scheduler_task_t scheduler_tasks[] =
     {rtc_task,  500U, 0U},
 };
 
-static const uint32_t scheduler_task_count = sizeof(scheduler_tasks) / sizeof(scheduler_tasks[0]);
+static const uint32_t task_count = sizeof(tasks) / sizeof(tasks[0]);
 
-/**
- * @brief Initialize scheduler task timestamps.
- */
 void scheduler_init(void)
 {
-    uint32_t now_ms = systick_get_ms();
+    uint32_t now = systick_get_ms();
 
-    for (uint32_t task_index = 0U; task_index < scheduler_task_count; task_index++)
+    for (uint32_t i = 0U; i < task_count; i++)
     {
-        scheduler_tasks[task_index].last_run_ms = now_ms;
+        tasks[i].last_ms = now;
     }
 }
 
-/**
- * @brief Run due tasks according to their millisecond period.
- */
 void scheduler_run(void)
 {
-    uint32_t now_ms = systick_get_ms();
+    uint32_t now = systick_get_ms();
 
-    for (uint32_t task_index = 0U; task_index < scheduler_task_count; task_index++)
+    for (uint32_t i = 0U; i < task_count; i++)
     {
-        scheduler_task_t *task = &scheduler_tasks[task_index];
-
-        if ((task->task_handler != NULL) &&
-            (task->period_ms > 0U) &&
-            ((uint32_t)(now_ms - task->last_run_ms) >= task->period_ms))
+        if ((uint32_t)(now - tasks[i].last_ms) >= tasks[i].period_ms)
         {
-            task->last_run_ms = now_ms;
-            task->task_handler();
+            tasks[i].last_ms = now;
+            tasks[i].run();
         }
     }
 }
