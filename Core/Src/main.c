@@ -5,7 +5,7 @@ int main(void)
     systick_config();
 
     led_init();
-    bsp_btn_init();
+    btn_init();
     bsp_oled_init();
     bsp_gd25qxx_init();
     bsp_usart_init();

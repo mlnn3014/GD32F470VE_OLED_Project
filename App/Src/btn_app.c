@@ -1,119 +1,82 @@
-/* Licence
-* Company: MCUSTUDIO
-* Auther: Ahypnis.
-* Version: V0.10
-* Time: 2025/06/05
-* Note:
-*/
 #include "mcu_cmic_gd32f470vet6.h"
 
-
-typedef enum
-{
-    USER_BUTTON_0 = 0,
-    USER_BUTTON_1,
-    USER_BUTTON_2,
-    USER_BUTTON_3,
-    USER_BUTTON_4,
-    USER_BUTTON_5,
-    USER_BUTTON_6,
-    USER_BUTTON_MAX,
-
-    //    USER_BUTTON_COMBO_0 = 0x100,
-    //    USER_BUTTON_COMBO_1,
-    //    USER_BUTTON_COMBO_2,
-    //    USER_BUTTON_COMBO_3,
-    //    USER_BUTTON_COMBO_MAX,
-} user_button_t;
-
-/*  Debounce time in milliseconds, Debounce time in milliseconds for release event, Minimum pressed time for valid click event, Maximum ...,
-    Maximum time between 2 clicks to be considered consecutive click, Time in ms for periodic keep alive event, Max number of consecutive clicks */
-static const ebtn_btn_param_t defaul_ebtn_param = EBTN_PARAMS_INIT(20, 0, 20, 1000, 0, 1000, 10);
-
-static ebtn_btn_t btns[] = {
-    EBTN_BUTTON_INIT(USER_BUTTON_0, &defaul_ebtn_param),
-    EBTN_BUTTON_INIT(USER_BUTTON_1, &defaul_ebtn_param),
-    EBTN_BUTTON_INIT(USER_BUTTON_2, &defaul_ebtn_param),
-    EBTN_BUTTON_INIT(USER_BUTTON_3, &defaul_ebtn_param),
-    EBTN_BUTTON_INIT(USER_BUTTON_4, &defaul_ebtn_param),
-    EBTN_BUTTON_INIT(USER_BUTTON_5, &defaul_ebtn_param),
-    EBTN_BUTTON_INIT(USER_BUTTON_6, &defaul_ebtn_param),
+static button_t buttons[BTN_COUNT] = {
+    {.id = BTN_1},
+    {.id = BTN_2},
+    {.id = BTN_3},
+    {.id = BTN_4},
+    {.id = BTN_5},
+    {.id = BTN_6},
+    {.id = BTN_7},
 };
 
-// static ebtn_btn_combo_t btns_combo[] = {
-//     EBTN_BUTTON_COMBO_INIT_RAW(USER_BUTTON_COMBO_0, &defaul_ebtn_param, EBTN_EVT_MASK_ONCLICK),
-//     EBTN_BUTTON_COMBO_INIT_RAW(USER_BUTTON_COMBO_1, &defaul_ebtn_param, EBTN_EVT_MASK_ONCLICK),
-// };
-
-uint8_t prv_btn_get_state(struct ebtn_btn *btn)
+static uint8_t btn_read_state(button_t *button)
 {
-    switch (btn->key_id)
+    if (button == 0)
     {
-    case USER_BUTTON_0:
-        return !KEY1_READ;
-    case USER_BUTTON_1:
-        return !KEY2_READ;
-    case USER_BUTTON_2:
-        return !KEY3_READ;
-    case USER_BUTTON_3:
-        return !KEY4_READ;
-    case USER_BUTTON_4:
-        return !KEY5_READ;
-    case USER_BUTTON_5:
-        return !KEY6_READ;
-    case USER_BUTTON_6:
-        return !KEYW_READ;
+        return 0U;
+    }
+
+    return btn_read((btn_id_t)button->id);
+}
+
+static void btn_toggle_led(uint8_t id)
+{
+    switch ((btn_id_t)id)
+    {
+    case BTN_1:
+        led_toggle(LED_1);
+        break;
+    case BTN_2:
+        led_toggle(LED_2);
+        break;
+    case BTN_3:
+        led_toggle(LED_3);
+        break;
+    case BTN_4:
+        led_toggle(LED_4);
+        break;
+    case BTN_5:
+        led_toggle(LED_5);
+        break;
+    case BTN_6:
+    case BTN_7:
+        led_toggle(LED_6);
+        break;
     default:
-        return 0;
+        break;
     }
 }
 
-void prv_btn_event(struct ebtn_btn *btn, ebtn_evt_t evt)
+static void btn_event(button_t *button, button_event_t event)
 {
-    if (evt == EBTN_EVT_ONCLICK)
+    if (button == 0)
     {
-        switch (btn->key_id)
-        {
-        case USER_BUTTON_0:
-            led_toggle(LED_1);
-            break;
-        case USER_BUTTON_1:
-            led_toggle(LED_2);
-            break;
-        case USER_BUTTON_2:
-            led_toggle(LED_3);
-            break;
-        case USER_BUTTON_3:
-            led_toggle(LED_4);
-            break;
-        case USER_BUTTON_4:
-            led_toggle(LED_5);
-            break;
-        case USER_BUTTON_5:
-            led_toggle(LED_6);
-            break;
-        case USER_BUTTON_6:
-            led_toggle(LED_6);
-            break;
-        default:
-            break;
-        }
+        return;
+    }
+
+    switch (event)
+    {
+    case BUTTON_EVT_PRESS:
+        break;
+    case BUTTON_EVT_RELEASE:
+        break;
+    case BUTTON_EVT_CLICK:
+        btn_toggle_led(button->id);
+        break;
+    case BUTTON_EVT_LONG_PRESS:
+        break;
+    default:
+        break;
     }
 }
 
 void app_btn_init(void)
 {
-    // ebtn_init(btns, EBTN_ARRAY_SIZE(btns), btns_combo, EBTN_ARRAY_SIZE(btns_combo), prv_btn_get_state, prv_btn_event);
-    ebtn_init(btns, EBTN_ARRAY_SIZE(btns), NULL, 0, prv_btn_get_state, prv_btn_event);
-
-    //    ebtn_combo_btn_add_btn(&btns_combo[0], USER_BUTTON_0);
-    //    ebtn_combo_btn_add_btn(&btns_combo[0], USER_BUTTON_1);
-
-    //    ebtn_combo_btn_add_btn(&btns_combo[1], USER_BUTTON_2);
-    //    ebtn_combo_btn_add_btn(&btns_combo[1], USER_BUTTON_3);
+    button_init(buttons, BTN_COUNT, btn_read_state, btn_event);
 }
 
 void btn_task(void)
 {
-    
+    button_scan(systick_get_ms());
 }

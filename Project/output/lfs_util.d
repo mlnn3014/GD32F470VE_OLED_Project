@@ -1,5 +1,5 @@
-.\output\lfs_util.o: ..\Libraries\gd25qxx\lfs_util.c
-.\output\lfs_util.o: ..\Libraries\gd25qxx\lfs_util.h
+.\output\lfs_util.o: ..\Compenents\gd25qxx\lfs_util.c
+.\output\lfs_util.o: ..\Compenents\gd25qxx\lfs_util.h
 .\output\lfs_util.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
 .\output\lfs_util.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdbool.h
 .\output\lfs_util.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\string.h

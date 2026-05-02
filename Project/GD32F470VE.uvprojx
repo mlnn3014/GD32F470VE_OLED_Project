@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,GD32F470,__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core\Inc;..\App\Inc;..\Bsp\Inc;..\Compenents\bsp;..\Compenents\gd30ad3344;..\Compenents\oled;..\Compenents\gd25qxx;..\Compenents\ebtn;..\Compenents\sdio;..\Compenents\fatfs;..\Firmware\GD32F4xx_standard_peripheral\Include;..\Firmware\CMSIS_5\CMSIS\Core\Include;..\Firmware\CMSIS;..\Firmware\CMSIS\GD\GD32F4xx\Include</IncludePath>
+              <IncludePath>..\Core\Inc;..\App\Inc;..\Bsp\Inc;..\Compenents\bsp;..\Compenents\gd30ad3344;..\Compenents\oled;..\Compenents\gd25qxx;..\Compenents\button;..\Compenents\sdio;..\Compenents\fatfs;..\Firmware\GD32F4xx_standard_peripheral\Include;..\Firmware\CMSIS_5\CMSIS\Core\Include;..\Firmware\CMSIS;..\Firmware\CMSIS\GD\GD32F4xx\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -455,6 +455,11 @@
           <GroupName>Bsp</GroupName>
           <Files>
             <File>
+              <FileName>btn_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\Src\btn_bsp.c</FilePath>
+            </File>
+            <File>
               <FileName>led_bsp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Bsp\Src\led_bsp.c</FilePath>
@@ -517,12 +522,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Components/ebtn</GroupName>
+          <GroupName>Components/button</GroupName>
           <Files>
             <File>
-              <FileName>ebtn.c</FileName>
+              <FileName>button.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Compenents\ebtn\ebtn.c</FilePath>
+              <FilePath>..\Compenents\button\button.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -34,19 +34,6 @@ rtc_alarm_struct  rtc_alarm;
 __IO uint32_t prescaler_a = 0, prescaler_s = 0;
 uint32_t RTCSRC_FLAG = 0;
 
-void bsp_btn_init(void)
-{
-    /* enable the led clock */
-    rcu_periph_clock_enable(KEYB_CLK_PORT);
-    rcu_periph_clock_enable(KEYE_CLK_PORT);
-    rcu_periph_clock_enable(KEYA_CLK_PORT);
-    
-    /* configure led GPIO port */ 
-    gpio_mode_set(KEYB_PORT, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, KEY1_PIN | KEY2_PIN | KEY3_PIN | KEY4_PIN | KEY5_PIN);
-    gpio_mode_set(KEYE_PORT, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, KEY6_PIN);
-    gpio_mode_set(KEYA_PORT, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, KEYW_PIN);
-}
-
 /*!
     \brief      configure USART
     \param[in]  none

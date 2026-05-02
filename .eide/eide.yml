@@ -28,6 +28,7 @@ virtualFolder:
       folders: []
     - name: Bsp
       files:
+        - path: Bsp/Src/btn_bsp.c
         - path: Bsp/Src/led_bsp.c
       folders: []
     - name: Components
@@ -52,9 +53,9 @@ virtualFolder:
           files:
             - path: Compenents/oled/oled.c
           folders: []
-        - name: ebtn
+        - name: button
           files:
-            - path: Compenents/ebtn/ebtn.c
+            - path: Compenents/button/button.c
           folders: []
         - name: sdio
           files:
@@ -126,7 +127,7 @@ targets:
         - Compenents/gd30ad3344
         - Compenents/oled
         - Compenents/gd25qxx
-        - Compenents/ebtn
+        - Compenents/button
         - Compenents/sdio
         - Compenents/fatfs
         - Firmware/GD32F4xx_standard_peripheral/Include

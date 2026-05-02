@@ -13,8 +13,9 @@
 #include "gd32f4xx_dma.h"
 #include "systick.h"
 #include "led_bsp.h"
+#include "btn_bsp.h"
 
-#include "ebtn.h"
+#include "button.h"
 #include "oled.h"
 #include "gd25qxx.h"
 #include "gd30ad3344.h"
@@ -41,35 +42,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-/* KEY */
-#define KEYE_PORT        GPIOE
-#define KEYB_PORT        GPIOB
-#define KEYA_PORT        GPIOA
-#define KEYE_CLK_PORT    RCU_GPIOE
-#define KEYB_CLK_PORT    RCU_GPIOB
-#define KEYA_CLK_PORT    RCU_GPIOA
-
-#define KEY1_PIN        GPIO_PIN_15
-#define KEY2_PIN        GPIO_PIN_13
-#define KEY3_PIN        GPIO_PIN_11
-#define KEY4_PIN        GPIO_PIN_9
-#define KEY5_PIN        GPIO_PIN_7
-#define KEY6_PIN        GPIO_PIN_0
-#define KEYW_PIN        GPIO_PIN_0
-
-#define KEY1_READ       gpio_input_bit_get(KEYE_PORT, KEY1_PIN)
-#define KEY2_READ       gpio_input_bit_get(KEYE_PORT, KEY2_PIN)
-#define KEY3_READ       gpio_input_bit_get(KEYE_PORT, KEY3_PIN)
-#define KEY4_READ       gpio_input_bit_get(KEYE_PORT, KEY4_PIN)
-#define KEY5_READ       gpio_input_bit_get(KEYE_PORT, KEY5_PIN)
-#define KEY6_READ       gpio_input_bit_get(KEYB_PORT, KEY6_PIN)
-#define KEYW_READ       gpio_input_bit_get(KEYA_PORT, KEYW_PIN)
-
-// FUNCTION
-void bsp_btn_init(void);
-
-/***************************************************************************************************************/
-
 /* OLED */
 #define I2C0_OWN_ADDRESS7      0x72
 #define I2C0_SLAVE_ADDRESS7    0x82

@@ -342,6 +342,18 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+      <PathWithFileName>..\Bsp\Src\btn_bsp.c</PathWithFileName>
+      <FilenameWithoutPath>btn_bsp.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>14</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
       <PathWithFileName>..\Bsp\Src\led_bsp.c</PathWithFileName>
       <FilenameWithoutPath>led_bsp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -466,7 +478,7 @@
   </Group>
 
   <Group>
-    <GroupName>Components/ebtn</GroupName>
+    <GroupName>Components/button</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -478,8 +490,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Compenents\ebtn\ebtn.c</PathWithFileName>
-      <FilenameWithoutPath>ebtn.c</FilenameWithoutPath>
+      <PathWithFileName>..\Compenents\button\button.c</PathWithFileName>
+      <FilenameWithoutPath>button.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

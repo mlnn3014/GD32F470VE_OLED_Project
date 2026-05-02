@@ -33,7 +33,9 @@ int oled_printf(uint8_t x, uint8_t y, const char *format, ...)
 
 void oled_task(void)
 {
-    oled_printf(0, 0, "KEY STA: %d%d%d%d%d%d", KEY1_READ, KEY2_READ, KEY3_READ, KEY4_READ, KEY5_READ, KEY6_READ);
+    oled_printf(0, 0, "KEY STA: %d%d%d%d%d%d",
+                btn_read(BTN_1), btn_read(BTN_2), btn_read(BTN_3),
+                btn_read(BTN_4), btn_read(BTN_5), btn_read(BTN_6));
     oled_printf(0, 2, "ADC: ");
 }
 
