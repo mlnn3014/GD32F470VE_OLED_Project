@@ -1,0 +1,10 @@
+.\output\lfs.o: ..\Libraries\gd25qxx\lfs.c
+.\output\lfs.o: ..\Libraries\gd25qxx\lfs.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdbool.h
+.\output\lfs.o: ..\Libraries\gd25qxx\lfs_util.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\string.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\inttypes.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdlib.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\assert.h
+.\output\lfs.o: C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdio.h
