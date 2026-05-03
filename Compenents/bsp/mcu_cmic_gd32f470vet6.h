@@ -14,9 +14,9 @@
 #include "systick.h"
 #include "led_bsp.h"
 #include "btn_bsp.h"
+#include "oled_bsp.h"
 
 #include "button.h"
-#include "oled.h"
 #include "gd25qxx.h"
 #include "gd30ad3344.h"
 #include "sdio_sdcard.h"
@@ -42,21 +42,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-/* OLED */
-#define I2C0_OWN_ADDRESS7      0x72
-#define I2C0_SLAVE_ADDRESS7    0x82
-#define I2C0_DATA_ADDRESS      (uint32_t)&I2C_DATA(I2C0)
-
-#define OLED_PORT        GPIOB
-#define OLED_CLK_PORT    RCU_GPIOB
-#define OLED_DAT_PIN     GPIO_PIN_9
-#define OLED_CLK_PIN     GPIO_PIN_8
-
-// FUNCTION
-void bsp_oled_init(void);
-
-/***************************************************************************************************************/
-
 /* gd25qxx */
 
 #define SPI_PORT              GPIOB

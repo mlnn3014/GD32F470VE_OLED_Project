@@ -80,9 +80,9 @@
             <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>1</RunUserProg1>
+            <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>./keil5_disp_size_bar.exe</UserProg1Name>
+            <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,GD32F470,__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core\Inc;..\App\Inc;..\Bsp\Inc;..\Compenents\bsp;..\Compenents\gd30ad3344;..\Compenents\oled;..\Compenents\gd25qxx;..\Compenents\button;..\Compenents\sdio;..\Compenents\fatfs;..\Firmware\GD32F4xx_standard_peripheral\Include;..\Firmware\CMSIS_5\CMSIS\Core\Include;..\Firmware\CMSIS;..\Firmware\CMSIS\GD\GD32F4xx\Include</IncludePath>
+              <IncludePath>..\Core\Inc;..\App\Inc;..\Bsp\Inc;..\Compenents\bsp;..\Compenents\gd30ad3344;..\Compenents\oled;..\Compenents\oled\libdriver;..\Compenents\gd25qxx;..\Compenents\button;..\Compenents\sdio;..\Compenents\fatfs;..\Firmware\GD32F4xx_standard_peripheral\Include;..\Firmware\CMSIS_5\CMSIS\Core\Include;..\Firmware\CMSIS;..\Firmware\CMSIS\GD\GD32F4xx\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -464,6 +464,11 @@
               <FileType>1</FileType>
               <FilePath>..\Bsp\Src\led_bsp.c</FilePath>
             </File>
+            <File>
+              <FileName>oled_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\Src\oled_bsp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -515,9 +520,9 @@
           <GroupName>Components/oled</GroupName>
           <Files>
             <File>
-              <FileName>oled.c</FileName>
+              <FileName>driver_ssd1306.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Compenents\oled\oled.c</FilePath>
+              <FilePath>..\Compenents\oled\libdriver\driver_ssd1306.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -553,6 +558,11 @@
               <FileName>ff.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Compenents\fatfs\ff.c</FilePath>
+            </File>
+            <File>
+              <FileName>ccsbcs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Compenents\fatfs\option\ccsbcs.c</FilePath>
             </File>
           </Files>
         </Group>

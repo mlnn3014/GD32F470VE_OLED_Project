@@ -7,7 +7,6 @@
 extern "C" {
 #endif
 
-int oled_printf(uint8_t x, uint8_t y, const char *format, ...);
 void oled_task(void);
 /* CUSTOM EDIT */
 
@@ -16,5 +15,4 @@ void oled_task(void);
 #endif
 
 #endif
-
 

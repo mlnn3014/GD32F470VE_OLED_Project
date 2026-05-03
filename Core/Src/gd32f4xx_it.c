@@ -35,6 +35,8 @@ OF SUCH DAMAGE.
 #include "gd32f4xx_it.h"
 #include "main.h"
 #include "systick.h"
+#include "led_app.h"
+#include "oled_bsp.h"
 #include "sdio_sdcard.h"
 #include "string.h"
 
@@ -187,6 +189,11 @@ void SDIO_IRQHandler(void)
     sd_interrupts_process();
 }
 
+void DMA0_Channel6_IRQHandler(void)
+{
+    oled_dma_irq_handler();
+}
+
 /*!
     \brief    this function handles SysTick exception
     \param[in]  none
@@ -196,4 +203,5 @@ void SDIO_IRQHandler(void)
 void SysTick_Handler(void)
 {
     delay_decrement();
+    led_app_tick_1ms();
 }

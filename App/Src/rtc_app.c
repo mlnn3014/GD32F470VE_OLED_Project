@@ -12,5 +12,6 @@ void rtc_task(void)
 {
     rtc_current_time_get(&rtc_initpara);
 
-    oled_printf(0, 3, "%0.2x:%0.2x:%0.2x", rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
+    (void)oled_fill_rect(48, 16, 127, 23, 0U);
+    oled_printf(48, 16, "%0.2x:%0.2x:%0.2x", rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 }

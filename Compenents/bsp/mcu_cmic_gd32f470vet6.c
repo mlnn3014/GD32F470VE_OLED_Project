@@ -1,4 +1,4 @@
-/* Licence
+﻿/* Licence
 * Company: MCUSTUDIO
 * Auther: Ahypnis.
 * Version: V0.10
@@ -7,25 +7,20 @@
 */
 #include "mcu_cmic_gd32f470vet6.h"
 
-/* OLED 命令和数据缓冲区 */
-__IO uint8_t oled_cmd_buf[2] = {0x00, 0x00};  // 命令缓冲区：控制字节 + 命令
-__IO uint8_t oled_data_buf[2] = {0x40, 0x00}; // 数据缓冲区：控制字节 + 数据
 
-/* SPI3 DMA 相关缓冲区 */
-uint8_t spi3_send_array[ARRAYSIZE] = {0};    // SPI0 DMA 发送缓冲区
-uint8_t spi3_receive_array[ARRAYSIZE] = {0}; // SPI0 DMA 接收缓冲区
-
-/* SPI1 DMA 相关缓冲区 */
-uint8_t spi1_send_array[ARRAYSIZE] = {0};    // SPI1 DMA 发送缓冲区
-uint8_t spi1_receive_array[ARRAYSIZE] = {0}; // SPI1 DMA 接收缓冲区
-
-/* 串口DMA接收 相关缓冲区 */
+/* SPI3 DMA 鐩稿叧缂撳啿鍖?*/
+uint8_t spi3_send_array[ARRAYSIZE] = {0};    // SPI0 DMA 鍙戦€佺紦鍐插尯
+uint8_t spi3_receive_array[ARRAYSIZE] = {0}; // SPI0 DMA 鎺ユ敹缂撳啿鍖?
+/* SPI1 DMA 鐩稿叧缂撳啿鍖?*/
+uint8_t spi1_send_array[ARRAYSIZE] = {0};    // SPI1 DMA 鍙戦€佺紦鍐插尯
+uint8_t spi1_receive_array[ARRAYSIZE] = {0}; // SPI1 DMA 鎺ユ敹缂撳啿鍖?
+/* 涓插彛DMA鎺ユ敹 鐩稿叧缂撳啿鍖?*/
 uint8_t rxbuffer[512];
 
-/* ADC 相关缓冲区 */
+/* ADC 鐩稿叧缂撳啿鍖?*/
 uint16_t adc_value[1];
 
-/* DAC 输出 */
+/* DAC 杈撳嚭 */
 uint16_t convertarr[CONVERT_NUM] = {0};
 
 /* RTC */
@@ -96,54 +91,6 @@ void bsp_usart_init(void)
     usart_interrupt_enable(USART0, USART_INT_IDLE);
 }
 
-void bsp_oled_init(void)
-{
-    dma_single_data_parameter_struct dma_init_struct;
-    /* enable GPIOB clock */
-    rcu_periph_clock_enable(OLED_CLK_PORT);
-    /* enable I2C0 clock */
-    rcu_periph_clock_enable(RCU_I2C0);
-    /* enable DMA0 clock */
-    rcu_periph_clock_enable(RCU_DMA0);
-    
-    /* connect PB9 to I2C0_SDA */
-    gpio_af_set(OLED_PORT, GPIO_AF_4, OLED_DAT_PIN);
-    /* connect PB8 to I2C0_SCL */
-    gpio_af_set(OLED_PORT, GPIO_AF_4, OLED_CLK_PIN);
-    
-    gpio_mode_set(OLED_PORT, GPIO_MODE_AF, GPIO_PUPD_PULLUP, OLED_DAT_PIN);
-    gpio_output_options_set(OLED_PORT, GPIO_OTYPE_OD, GPIO_OSPEED_50MHZ, OLED_DAT_PIN);
-    gpio_mode_set(OLED_PORT, GPIO_MODE_AF, GPIO_PUPD_PULLUP, OLED_CLK_PIN);
-    gpio_output_options_set(OLED_PORT, GPIO_OTYPE_OD, GPIO_OSPEED_50MHZ, OLED_CLK_PIN);
-    
-    /* configure I2C0 clock */
-    i2c_clock_config(I2C0, 400000, I2C_DTCY_2);
-    /* configure I2C0 address */
-    i2c_mode_addr_config(I2C0, I2C_I2CMODE_ENABLE, I2C_ADDFORMAT_7BITS, I2C0_OWN_ADDRESS7);
-    /* enable I2C0 */
-    i2c_enable(I2C0);
-    /* enable acknowledge */
-    i2c_ack_config(I2C0, I2C_ACK_ENABLE);
-    
-    /* 初始化 DMA 通道用于 I2C0 发送 */
-    dma_deinit(DMA0, DMA_CH6);
-    
-    dma_single_data_para_struct_init(&dma_init_struct);
-    dma_init_struct.direction = DMA_MEMORY_TO_PERIPH;
-    dma_init_struct.memory0_addr = (uint32_t)oled_data_buf;  // 先将地址设为数据缓冲区
-    dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
-    dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
-    dma_init_struct.number = 2;  // 发送 2 个字节 (控制字节 + 数据/命令)
-    dma_init_struct.periph_addr = I2C0_DATA_ADDRESS;  // I2C0 数据寄存器地址
-    dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
-    dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
-    dma_single_data_mode_init(DMA0, DMA_CH6, &dma_init_struct);
-    
-    /* 配置 DMA 模式 */
-    dma_circulation_disable(DMA0, DMA_CH6);
-    dma_channel_subperipheral_select(DMA0, DMA_CH6, DMA_SUBPERI1);  // I2C0 TX 对应的子外设
-}
-
 void bsp_gd25qxx_init(void)
 {
     rcu_periph_clock_enable(SPI_CLK_PORT);
@@ -171,7 +118,7 @@ void bsp_gd25qxx_init(void)
     spi_init_struct.endian               = SPI_ENDIAN_MSB;
     spi_init(SPI1, &spi_init_struct);
 
-    /* 初始化 SPI Flash */
+    /* 鍒濆鍖?SPI Flash */
     spi_flash_init();
 }
 
@@ -202,7 +149,7 @@ void bsp_gd30ad3344_init(void)
     spi_init_struct.endian               = SPI_ENDIAN_MSB;
     spi_init(SPI3, &spi_init_struct);
 
-    /* 初始化 SPI gd30ad3344 */
+    /* 鍒濆鍖?SPI gd30ad3344 */
     GD30AD3344_Init();
 }
 
@@ -324,7 +271,7 @@ void bsp_dac_init(void)
     dma_flag_clear(DMA0, DMA_CH5, DMA_INTF_FTFIF);    /* configure the DMA0 channel 5 */
     dma_channel_subperipheral_select(DMA0, DMA_CH5, DMA_SUBPERI7);
     
-    dma_struct.periph_addr         = DAC0_R12DH_ADDRESS;  // 使用12位右对齐数据寄存器
+    dma_struct.periph_addr         = DAC0_R12DH_ADDRESS;
     dma_struct.memory0_addr        = (uint32_t)convertarr;
     dma_struct.direction           = DMA_MEMORY_TO_PERIPH;
     dma_struct.number              = CONVERT_NUM;
@@ -418,7 +365,7 @@ int bsp_rtc_init(void)
     /* get RTC clock entry selection */
     RTCSRC_FLAG = GET_BITS(RCU_BDCTL, 8, 9);
 
-    /* 判断是否初次上电设置时间， 如果板子没有纽扣电池 则不带时间记忆功能 就按照每次上电都设置一次初始时间 */
+    /* 鍒ゆ柇鏄惁鍒濇涓婄數璁剧疆鏃堕棿锛?濡傛灉鏉垮瓙娌℃湁绾芥墸鐢垫睜 鍒欎笉甯︽椂闂磋蹇嗗姛鑳?灏辨寜鐓ф瘡娆′笂鐢甸兘璁剧疆涓€娆″垵濮嬫椂闂?*/
     bsp_rtc_setup();
     
 //    if((BKP_VALUE != RTC_BKP0) || (0x00 == RTCSRC_FLAG)){

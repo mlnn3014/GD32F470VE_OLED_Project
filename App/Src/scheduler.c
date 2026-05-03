@@ -8,12 +8,11 @@ typedef struct {
 
 static task_t tasks[] =
 {
-    {led_task,  1U,   0U},
-    {adc_task,  100U, 0U},
-    {oled_task, 10U,  0U},
     {btn_task,  5U,   0U},
-    {uart_task, 5U,   0U},
-    {rtc_task,  500U, 0U},
+    // {adc_task,  100U, 0U},
+    {oled_task, 10U,  0U},
+    // {uart_task, 5U,   0U},
+    {rtc_task,  500U, 0U}
 };
 
 static const uint32_t task_count = sizeof(tasks) / sizeof(tasks[0]);

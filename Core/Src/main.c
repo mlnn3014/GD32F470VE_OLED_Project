@@ -4,9 +4,8 @@ int main(void)
 {
     systick_config();
 
-    led_init();
+    led_app_init();
     btn_init();
-    bsp_oled_init();
     bsp_gd25qxx_init();
     bsp_usart_init();
 
@@ -32,8 +31,14 @@ int main(void)
     app_btn_init();
 
     my_printf(DEBUG_USART, "BOOT: oled init...\r\n");
-    OLED_Init();
-    my_printf(DEBUG_USART, "BOOT: oled done\r\n");
+    if (oled_init() == 0U) {
+        my_printf(DEBUG_USART, "BOOT: oled done\r\n");
+        oled_clear();
+        oled_printf(0, 0, "BOOT: start");
+        (void)oled_update();
+    } else {
+        my_printf(DEBUG_USART, "BOOT: oled failed\r\n");
+    }
 
     test_spi_flash();
 #if SD_FATFS_DEMO_ENABLE
