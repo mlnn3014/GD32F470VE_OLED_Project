@@ -43,8 +43,8 @@
 .\output\gd30ad3344.o: ..\Core\Inc\systick.h
 .\output\gd30ad3344.o: ..\Bsp\Inc\led_bsp.h
 .\output\gd30ad3344.o: ..\Bsp\Inc\btn_bsp.h
+.\output\gd30ad3344.o: ..\Bsp\Inc\oled_bsp.h
 .\output\gd30ad3344.o: ..\Compenents\button\button.h
-.\output\gd30ad3344.o: ..\Compenents\oled\oled.h
 .\output\gd30ad3344.o: ..\Compenents\gd25qxx\gd25qxx.h
 .\output\gd30ad3344.o: ..\Compenents\gd30ad3344\gd30ad3344.h
 .\output\gd30ad3344.o: ..\Compenents\sdio\sdio_sdcard.h

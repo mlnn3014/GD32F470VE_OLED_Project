@@ -42,8 +42,8 @@
 .\output\mcu_cmic_gd32f470vet6.o: ..\Core\Inc\systick.h
 .\output\mcu_cmic_gd32f470vet6.o: ..\Bsp\Inc\led_bsp.h
 .\output\mcu_cmic_gd32f470vet6.o: ..\Bsp\Inc\btn_bsp.h
+.\output\mcu_cmic_gd32f470vet6.o: ..\Bsp\Inc\oled_bsp.h
 .\output\mcu_cmic_gd32f470vet6.o: ..\Compenents\button\button.h
-.\output\mcu_cmic_gd32f470vet6.o: ..\Compenents\oled\oled.h
 .\output\mcu_cmic_gd32f470vet6.o: ..\Compenents\gd25qxx\gd25qxx.h
 .\output\mcu_cmic_gd32f470vet6.o: ..\Compenents\gd30ad3344\gd30ad3344.h
 .\output\mcu_cmic_gd32f470vet6.o: ..\Compenents\bsp\mcu_cmic_gd32f470vet6.h

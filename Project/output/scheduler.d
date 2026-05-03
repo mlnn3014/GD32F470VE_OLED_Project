@@ -42,8 +42,8 @@
 .\output\scheduler.o: ..\Core\Inc\systick.h
 .\output\scheduler.o: ..\Bsp\Inc\led_bsp.h
 .\output\scheduler.o: ..\Bsp\Inc\btn_bsp.h
+.\output\scheduler.o: ..\Bsp\Inc\oled_bsp.h
 .\output\scheduler.o: ..\Compenents\button\button.h
-.\output\scheduler.o: ..\Compenents\oled\oled.h
 .\output\scheduler.o: ..\Compenents\gd25qxx\gd25qxx.h
 .\output\scheduler.o: ..\Compenents\gd30ad3344\gd30ad3344.h
 .\output\scheduler.o: ..\Compenents\bsp\mcu_cmic_gd32f470vet6.h

@@ -1,7 +1,7 @@
 Dependencies for Project 'GD32F470VE', Target 'GD32F470VET6_Project': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCOMPLIER506
-F (..\App\Src\adc_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\adc_app.o --omf_browse .\output\adc_app.crf --depend .\output\adc_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\adc_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\adc_app.o --omf_browse .\output\adc_app.crf --depend .\output\adc_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -43,8 +43,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -53,9 +53,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -64,8 +64,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\btn_app.c)(0x69F56604)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\btn_app.o --omf_browse .\output\btn_app.crf --depend .\output\btn_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\btn_app.c)(0x69F6B708)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\btn_app.o --omf_browse .\output\btn_app.crf --depend .\output\btn_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -107,8 +107,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -117,9 +117,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -128,8 +128,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\led_app.c)(0x69F5612D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\led_app.o --omf_browse .\output\led_app.crf --depend .\output\led_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\led_app.c)(0x69F6B688)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\led_app.o --omf_browse .\output\led_app.crf --depend .\output\led_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -171,8 +171,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -181,9 +181,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -192,8 +192,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\oled_app.c)(0x69F566A8)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\oled_app.o --omf_browse .\output\oled_app.crf --depend .\output\oled_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\oled_app.c)(0x69F78BCB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\oled_app.o --omf_browse .\output\oled_app.crf --depend .\output\oled_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -235,8 +235,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -245,9 +245,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -256,8 +256,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\rtc_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\rtc_app.o --omf_browse .\output\rtc_app.crf --depend .\output\rtc_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\rtc_app.c)(0x69F788D8)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\rtc_app.o --omf_browse .\output\rtc_app.crf --depend .\output\rtc_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -299,8 +299,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -309,9 +309,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -320,8 +320,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\scheduler.c)(0x69F56057)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\scheduler.o --omf_browse .\output\scheduler.crf --depend .\output\scheduler.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\scheduler.c)(0x69F780F5)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\scheduler.o --omf_browse .\output\scheduler.crf --depend .\output\scheduler.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -363,8 +363,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -373,9 +373,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -384,8 +384,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\sd_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\sd_app.o --omf_browse .\output\sd_app.crf --depend .\output\sd_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\sd_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\sd_app.o --omf_browse .\output\sd_app.crf --depend .\output\sd_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -427,8 +427,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -437,9 +437,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -448,8 +448,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\App\Src\usart_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\usart_app.o --omf_browse .\output\usart_app.crf --depend .\output\usart_app.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\App\Src\usart_app.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\usart_app.o --omf_browse .\output\usart_app.crf --depend .\output\usart_app.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -491,8 +491,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -501,9 +501,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -512,8 +512,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Core\Src\main.c)(0x69F56604)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\Core\Src\main.c)(0x69F788C4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -555,8 +555,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -565,9 +565,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -576,7 +576,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Core\Src\systick.c)(0x69F557A9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\systick.o --omf_browse .\output\systick.crf --depend .\output\systick.d)
+F (..\Core\Src\systick.c)(0x69F557A9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\systick.o --omf_browse .\output\systick.crf --depend .\output\systick.d)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -616,8 +616,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
-F (..\Core\Src\gd32f4xx_it.c)(0x69F5587C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_it.o --omf_browse .\output\gd32f4xx_it.crf --depend .\output\gd32f4xx_it.d)
-I (..\Core\Inc\gd32f4xx_it.h)(0x69855FE5)
+F (..\Core\Src\gd32f4xx_it.c)(0x69F788BB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_it.o --omf_browse .\output\gd32f4xx_it.crf --depend .\output\gd32f4xx_it.d)
+I (..\Core\Inc\gd32f4xx_it.h)(0x69F788B5)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -656,11 +656,14 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-I (..\Core\Inc\main.h)(0x69855FE5)
+I (..\Core\Inc\main.h)(0x69F57559)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
+I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
-F (..\Firmware\CMSIS\GD\GD32F4xx\Source\system_gd32f4xx.c)(0x69855FE1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\system_gd32f4xx.o --omf_browse .\output\system_gd32f4xx.crf --depend .\output\system_gd32f4xx.d)
+F (..\Firmware\CMSIS\GD\GD32F4xx\Source\system_gd32f4xx.c)(0x69855FE1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\system_gd32f4xx.o --omf_browse .\output\system_gd32f4xx.crf --depend .\output\system_gd32f4xx.d)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -699,7 +702,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Bsp\Src\btn_bsp.c)(0x69F565F2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\btn_bsp.o --omf_browse .\output\btn_bsp.crf --depend .\output\btn_bsp.d)
+F (..\Bsp\Src\btn_bsp.c)(0x69F565F2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\btn_bsp.o --omf_browse .\output\btn_bsp.crf --depend .\output\btn_bsp.d)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
@@ -739,7 +742,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Bsp\Src\led_bsp.c)(0x69F55DCA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\led_bsp.o --omf_browse .\output\led_bsp.crf --depend .\output\led_bsp.d)
+F (..\Bsp\Src\led_bsp.c)(0x69F57D63)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\led_bsp.o --omf_browse .\output\led_bsp.crf --depend .\output\led_bsp.d)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
@@ -779,8 +782,55 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Compenents\bsp\mcu_cmic_gd32f470vet6.c)(0x69F56614)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\mcu_cmic_gd32f470vet6.o --omf_browse .\output\mcu_cmic_gd32f470vet6.crf --depend .\output\mcu_cmic_gd32f470vet6.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\Bsp\Src\oled_bsp.c)(0x69F78B2E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\oled_bsp.o --omf_browse .\output\oled_bsp.crf --depend .\output\oled_bsp.d)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
+I (..\Compenents\oled\libdriver\driver_ssd1306.h)(0x69F77C7F)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
+I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
+I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
+I (..\Firmware\CMSIS\core_cmInstr.h)(0x69855FE1)
+I (..\Firmware\CMSIS\core_cmFunc.h)(0x69855FE1)
+I (..\Firmware\CMSIS\core_cm4_simd.h)(0x69855FE1)
+I (..\Firmware\CMSIS\GD\GD32F4xx\Include\system_gd32f4xx.h)(0x69855FE1)
+I (..\Core\Inc\gd32f4xx_libopt.h)(0x69855FE5)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_rcu.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_adc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_can.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_crc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ctc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dac.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dbg.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dci.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dma.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exti.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_fmc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_fwdgt.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_gpio.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_syscfg.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_i2c.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_iref.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_pmu.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x69855FE2)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
+I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
+I (..\Compenents\oled\oledfont.h)(0x69F43FEC)
+I (..\Core\Inc\systick.h)(0x69F55B8F)
+I (..\App\Inc\usart_app.h)(0x69F43FEC)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
+F (..\Compenents\bsp\mcu_cmic_gd32f470vet6.c)(0x69F77E2F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\mcu_cmic_gd32f470vet6.o --omf_browse .\output\mcu_cmic_gd32f470vet6.crf --depend .\output\mcu_cmic_gd32f470vet6.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -822,8 +872,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -832,9 +882,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -843,8 +893,8 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\gd25qxx\gd25qxx.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd25qxx.o --omf_browse .\output\gd25qxx.crf --depend .\output\gd25qxx.d)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+F (..\Compenents\gd25qxx\gd25qxx.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd25qxx.o --omf_browse .\output\gd25qxx.crf --depend .\output\gd25qxx.d)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -886,8 +936,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -896,9 +946,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -907,7 +957,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\gd25qxx\lfs.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\lfs.o --omf_browse .\output\lfs.crf --depend .\output\lfs.d)
+F (..\Compenents\gd25qxx\lfs.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\lfs.o --omf_browse .\output\lfs.crf --depend .\output\lfs.d)
 I (..\Compenents\gd25qxx\lfs.h)(0x69F43FEC)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdbool.h)(0x5E8E3CC2)
@@ -917,7 +967,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\inttypes.h)(0x
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\assert.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\gd25qxx\lfs_port.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\lfs_port.o --omf_browse .\output\lfs_port.crf --depend .\output\lfs_port.d)
+F (..\Compenents\gd25qxx\lfs_port.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\lfs_port.o --omf_browse .\output\lfs_port.crf --depend .\output\lfs_port.d)
 I (..\Compenents\gd25qxx\lfs_port.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\lfs.h)(0x69F43FEC)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -961,7 +1011,7 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\gd25qxx\lfs_util.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\lfs_util.o --omf_browse .\output\lfs_util.crf --depend .\output\lfs_util.d)
+F (..\Compenents\gd25qxx\lfs_util.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\lfs_util.o --omf_browse .\output\lfs_util.crf --depend .\output\lfs_util.d)
 I (..\Compenents\gd25qxx\lfs_util.h)(0x69F43FEC)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdbool.h)(0x5E8E3CC2)
@@ -970,9 +1020,9 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\inttypes.h)(0x
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\assert.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\gd30ad3344\gd30ad3344.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd30ad3344.o --omf_browse .\output\gd30ad3344.crf --depend .\output\gd30ad3344.d)
+F (..\Compenents\gd30ad3344\gd30ad3344.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd30ad3344.o --omf_browse .\output\gd30ad3344.crf --depend .\output\gd30ad3344.d)
 I (..\Compenents\gd30ad3344\gd30ad3344.h)(0x69F43FEC)
-I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F56604)
+I (..\Compenents\bsp\mcu_cmic_gd32f470vet6.h)(0x69F77D33)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
@@ -1014,8 +1064,8 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Core\Inc\systick.h)(0x69F55B8F)
 I (..\Bsp\Inc\led_bsp.h)(0x69F55DCA)
 I (..\Bsp\Inc\btn_bsp.h)(0x69F565F2)
+I (..\Bsp\Inc\oled_bsp.h)(0x69F787D6)
 I (..\Compenents\button\button.h)(0x69F565F2)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
 I (..\Compenents\gd25qxx\gd25qxx.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ff.h)(0x69F43FEC)
@@ -1023,9 +1073,9 @@ I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\App\Inc\sd_app.h)(0x69F43FEC)
-I (..\App\Inc\led_app.h)(0x69F43FEC)
+I (..\App\Inc\led_app.h)(0x69F6B67E)
 I (..\App\Inc\adc_app.h)(0x69F43FEC)
-I (..\App\Inc\oled_app.h)(0x69F43FEC)
+I (..\App\Inc\oled_app.h)(0x69F77D33)
 I (..\App\Inc\usart_app.h)(0x69F43FEC)
 I (..\App\Inc\rtc_app.h)(0x69F43FEC)
 I (..\App\Inc\btn_app.h)(0x69F43FEC)
@@ -1034,51 +1084,16 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\oled\oled.c)(0x69F45F75)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\oled.o --omf_browse .\output\oled.crf --depend .\output\oled.d)
-I (..\Compenents\oled\oled.h)(0x69F43FEC)
+F (..\Compenents\oled\libdriver\driver_ssd1306.c)(0x69F77C7E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\driver_ssd1306.o --omf_browse .\output\driver_ssd1306.crf --depend .\output\driver_ssd1306.d)
+I (..\Compenents\oled\libdriver\driver_ssd1306.h)(0x69F77C7F)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
-I (..\Compenents\oled\oledfont.h)(0x69F43FEC)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_i2c.h)(0x69855FE2)
-I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
-I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
-I (..\Firmware\CMSIS\core_cmInstr.h)(0x69855FE1)
-I (..\Firmware\CMSIS\core_cmFunc.h)(0x69855FE1)
-I (..\Firmware\CMSIS\core_cm4_simd.h)(0x69855FE1)
-I (..\Firmware\CMSIS\GD\GD32F4xx\Include\system_gd32f4xx.h)(0x69855FE1)
-I (..\Core\Inc\gd32f4xx_libopt.h)(0x69855FE5)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_rcu.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_adc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_can.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_crc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ctc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dac.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dbg.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dci.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dma.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exti.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_fmc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_fwdgt.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_gpio.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_syscfg.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_iref.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_pmu.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x69855FE2)
-I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
-I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Compenents\button\button.c)(0x69F565F2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\button.o --omf_browse .\output\button.crf --depend .\output\button.d)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
+I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\string.h)(0x5E8E3CC2)
+I (..\Compenents\oled\libdriver\driver_ssd1306_font.h)(0x69F77C80)
+F (..\Compenents\button\button.c)(0x69F565F2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\button.o --omf_browse .\output\button.crf --depend .\output\button.d)
 I (..\Compenents\button\button.h)(0x69F565F2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdint.h)(0x5E8E3CC2)
-F (..\Compenents\sdio\sdio_sdcard.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\sdio_sdcard.o --omf_browse .\output\sdio_sdcard.crf --depend .\output\sdio_sdcard.d)
+F (..\Compenents\sdio\sdio_sdcard.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\sdio_sdcard.o --omf_browse .\output\sdio_sdcard.crf --depend .\output\sdio_sdcard.d)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1119,7 +1134,7 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stddef.h)(0x5E8E3CC2)
-F (..\Compenents\fatfs\diskio.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\diskio.o --omf_browse .\output\diskio.crf --depend .\output\diskio.d)
+F (..\Compenents\fatfs\diskio.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\diskio.o --omf_browse .\output\diskio.crf --depend .\output\diskio.d)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
 I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\sdio\sdio_sdcard.h)(0x69F43FEC)
@@ -1162,12 +1177,16 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdio.h)(0x5E8E3CC2)
-F (..\Compenents\fatfs\ff.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\ff.o --omf_browse .\output\ff.crf --depend .\output\ff.d)
+F (..\Compenents\fatfs\ff.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\ff.o --omf_browse .\output\ff.crf --depend .\output\ff.d)
 I (..\Compenents\fatfs\ff.h)(0x69F43FEC)
 I (..\Compenents\fatfs\integer.h)(0x69F43FEC)
 I (..\Compenents\fatfs\ffconf.h)(0x69F43FEC)
 I (..\Compenents\fatfs\diskio.h)(0x69F43FEC)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_adc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_adc.o --omf_browse .\output\gd32f4xx_adc.crf --depend .\output\gd32f4xx_adc.d)
+F (..\Compenents\fatfs\option\ccsbcs.c)(0x69F43FEC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\ccsbcs.o --omf_browse .\output\ccsbcs.crf --depend .\output\ccsbcs.d)
+I (..\Compenents\fatfs\option\../ff.h)(0x69F43FEC)
+I (..\Compenents\fatfs\option\../integer.h)(0x69F43FEC)
+I (..\Compenents\fatfs\option\../ffconf.h)(0x69F43FEC)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_adc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_adc.o --omf_browse .\output\gd32f4xx_adc.crf --depend .\output\gd32f4xx_adc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_adc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1206,7 +1225,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_can.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_can.o --omf_browse .\output\gd32f4xx_can.crf --depend .\output\gd32f4xx_can.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_can.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_can.o --omf_browse .\output\gd32f4xx_can.crf --depend .\output\gd32f4xx_can.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_can.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1245,7 +1264,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_crc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_crc.o --omf_browse .\output\gd32f4xx_crc.crf --depend .\output\gd32f4xx_crc.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_crc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_crc.o --omf_browse .\output\gd32f4xx_crc.crf --depend .\output\gd32f4xx_crc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_crc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1284,7 +1303,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_ctc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_ctc.o --omf_browse .\output\gd32f4xx_ctc.crf --depend .\output\gd32f4xx_ctc.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_ctc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_ctc.o --omf_browse .\output\gd32f4xx_ctc.crf --depend .\output\gd32f4xx_ctc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ctc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1323,7 +1342,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dac.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dac.o --omf_browse .\output\gd32f4xx_dac.crf --depend .\output\gd32f4xx_dac.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dac.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dac.o --omf_browse .\output\gd32f4xx_dac.crf --depend .\output\gd32f4xx_dac.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dac.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1362,7 +1381,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dbg.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dbg.o --omf_browse .\output\gd32f4xx_dbg.crf --depend .\output\gd32f4xx_dbg.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dbg.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dbg.o --omf_browse .\output\gd32f4xx_dbg.crf --depend .\output\gd32f4xx_dbg.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dbg.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1401,7 +1420,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dci.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dci.o --omf_browse .\output\gd32f4xx_dci.crf --depend .\output\gd32f4xx_dci.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dci.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dci.o --omf_browse .\output\gd32f4xx_dci.crf --depend .\output\gd32f4xx_dci.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dci.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1440,7 +1459,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dma.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dma.o --omf_browse .\output\gd32f4xx_dma.crf --depend .\output\gd32f4xx_dma.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_dma.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_dma.o --omf_browse .\output\gd32f4xx_dma.crf --depend .\output\gd32f4xx_dma.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_dma.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1479,7 +1498,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_enet.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_enet.o --omf_browse .\output\gd32f4xx_enet.crf --depend .\output\gd32f4xx_enet.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_enet.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_enet.o --omf_browse .\output\gd32f4xx_enet.crf --depend .\output\gd32f4xx_enet.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1518,7 +1537,7 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_exmc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_exmc.o --omf_browse .\output\gd32f4xx_exmc.crf --depend .\output\gd32f4xx_exmc.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_exmc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_exmc.o --omf_browse .\output\gd32f4xx_exmc.crf --depend .\output\gd32f4xx_exmc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1557,7 +1576,7 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_exti.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_exti.o --omf_browse .\output\gd32f4xx_exti.crf --depend .\output\gd32f4xx_exti.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_exti.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_exti.o --omf_browse .\output\gd32f4xx_exti.crf --depend .\output\gd32f4xx_exti.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exti.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1596,7 +1615,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_fmc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_fmc.o --omf_browse .\output\gd32f4xx_fmc.crf --depend .\output\gd32f4xx_fmc.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_fmc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_fmc.o --omf_browse .\output\gd32f4xx_fmc.crf --depend .\output\gd32f4xx_fmc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_fmc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1635,7 +1654,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_fwdgt.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_fwdgt.o --omf_browse .\output\gd32f4xx_fwdgt.crf --depend .\output\gd32f4xx_fwdgt.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_fwdgt.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_fwdgt.o --omf_browse .\output\gd32f4xx_fwdgt.crf --depend .\output\gd32f4xx_fwdgt.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_fwdgt.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1674,7 +1693,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_gpio.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_gpio.o --omf_browse .\output\gd32f4xx_gpio.crf --depend .\output\gd32f4xx_gpio.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_gpio.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_gpio.o --omf_browse .\output\gd32f4xx_gpio.crf --depend .\output\gd32f4xx_gpio.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_gpio.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1713,7 +1732,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_i2c.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_i2c.o --omf_browse .\output\gd32f4xx_i2c.crf --depend .\output\gd32f4xx_i2c.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_i2c.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_i2c.o --omf_browse .\output\gd32f4xx_i2c.crf --depend .\output\gd32f4xx_i2c.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_i2c.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1752,7 +1771,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_ipa.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_ipa.o --omf_browse .\output\gd32f4xx_ipa.crf --depend .\output\gd32f4xx_ipa.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_ipa.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_ipa.o --omf_browse .\output\gd32f4xx_ipa.crf --depend .\output\gd32f4xx_ipa.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1791,7 +1810,7 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_iref.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_iref.o --omf_browse .\output\gd32f4xx_iref.crf --depend .\output\gd32f4xx_iref.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_iref.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_iref.o --omf_browse .\output\gd32f4xx_iref.crf --depend .\output\gd32f4xx_iref.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_iref.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1830,7 +1849,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_misc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_misc.o --omf_browse .\output\gd32f4xx_misc.crf --depend .\output\gd32f4xx_misc.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_misc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_misc.o --omf_browse .\output\gd32f4xx_misc.crf --depend .\output\gd32f4xx_misc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1869,7 +1888,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_pmu.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_pmu.o --omf_browse .\output\gd32f4xx_pmu.crf --depend .\output\gd32f4xx_pmu.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_pmu.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_pmu.o --omf_browse .\output\gd32f4xx_pmu.crf --depend .\output\gd32f4xx_pmu.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_pmu.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1908,7 +1927,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_rcu.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_rcu.o --omf_browse .\output\gd32f4xx_rcu.crf --depend .\output\gd32f4xx_rcu.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_rcu.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_rcu.o --omf_browse .\output\gd32f4xx_rcu.crf --depend .\output\gd32f4xx_rcu.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_rcu.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1947,7 +1966,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_rtc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_rtc.o --omf_browse .\output\gd32f4xx_rtc.crf --depend .\output\gd32f4xx_rtc.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_rtc.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_rtc.o --omf_browse .\output\gd32f4xx_rtc.crf --depend .\output\gd32f4xx_rtc.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -1986,7 +2005,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_sdio.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_sdio.o --omf_browse .\output\gd32f4xx_sdio.crf --depend .\output\gd32f4xx_sdio.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_sdio.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_sdio.o --omf_browse .\output\gd32f4xx_sdio.crf --depend .\output\gd32f4xx_sdio.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2025,7 +2044,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_spi.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_spi.o --omf_browse .\output\gd32f4xx_spi.crf --depend .\output\gd32f4xx_spi.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_spi.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_spi.o --omf_browse .\output\gd32f4xx_spi.crf --depend .\output\gd32f4xx_spi.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2064,7 +2083,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_syscfg.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_syscfg.o --omf_browse .\output\gd32f4xx_syscfg.crf --depend .\output\gd32f4xx_syscfg.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_syscfg.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_syscfg.o --omf_browse .\output\gd32f4xx_syscfg.crf --depend .\output\gd32f4xx_syscfg.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_syscfg.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2103,7 +2122,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_timer.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_timer.o --omf_browse .\output\gd32f4xx_timer.crf --depend .\output\gd32f4xx_timer.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_timer.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_timer.o --omf_browse .\output\gd32f4xx_timer.crf --depend .\output\gd32f4xx_timer.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2142,7 +2161,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_tli.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_tli.o --omf_browse .\output\gd32f4xx_tli.crf --depend .\output\gd32f4xx_tli.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_tli.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_tli.o --omf_browse .\output\gd32f4xx_tli.crf --depend .\output\gd32f4xx_tli.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2181,7 +2200,7 @@ I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x69855FE2)
 I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E8E3CC2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_trng.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_trng.o --omf_browse .\output\gd32f4xx_trng.crf --depend .\output\gd32f4xx_trng.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_trng.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_trng.o --omf_browse .\output\gd32f4xx_trng.crf --depend .\output\gd32f4xx_trng.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2220,7 +2239,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_usart.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_usart.o --omf_browse .\output\gd32f4xx_usart.crf --depend .\output\gd32f4xx_usart.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_usart.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_usart.o --omf_browse .\output\gd32f4xx_usart.crf --depend .\output\gd32f4xx_usart.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)
@@ -2259,7 +2278,7 @@ I (C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCOMPLIER506\include\stdlib.h)(0x5E
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x69855FE2)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x69855FE2)
-F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_wwdgt.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_wwdgt.o --omf_browse .\output\gd32f4xx_wwdgt.crf --depend .\output\gd32f4xx_wwdgt.d)
+F (..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_wwdgt.c)(0x69855FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core\Inc -I ..\App\Inc -I ..\Bsp\Inc -I ..\Compenents\bsp -I ..\Compenents\gd30ad3344 -I ..\Compenents\oled -I ..\Compenents\oled\libdriver -I ..\Compenents\gd25qxx -I ..\Compenents\button -I ..\Compenents\sdio -I ..\Compenents\fatfs -I ..\Firmware\GD32F4xx_standard_peripheral\Include -I ..\Firmware\CMSIS_5\CMSIS\Core\Include -I ..\Firmware\CMSIS -I ..\Firmware\CMSIS\GD\GD32F4xx\Include-I.\RTE\_GD32F470VET6_Project-IC:\Users\ASUS\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-IC:\Users\ASUS\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="542" -DGD32F470 -D_RTE_ -DUSE_STDPERIPH_DRIVER -DGD32F470 -D__PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__-o .\output\gd32f4xx_wwdgt.o --omf_browse .\output\gd32f4xx_wwdgt.crf --depend .\output\gd32f4xx_wwdgt.d)
 I (..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x69855FE2)
 I (..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x69855FE1)
 I (..\Firmware\CMSIS\core_cm4.h)(0x69855FE1)

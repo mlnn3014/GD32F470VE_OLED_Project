@@ -42,8 +42,8 @@
 .\output\main.o: ..\Core\Inc\systick.h
 .\output\main.o: ..\Bsp\Inc\led_bsp.h
 .\output\main.o: ..\Bsp\Inc\btn_bsp.h
+.\output\main.o: ..\Bsp\Inc\oled_bsp.h
 .\output\main.o: ..\Compenents\button\button.h
-.\output\main.o: ..\Compenents\oled\oled.h
 .\output\main.o: ..\Compenents\gd25qxx\gd25qxx.h
 .\output\main.o: ..\Compenents\gd30ad3344\gd30ad3344.h
 .\output\main.o: ..\Compenents\bsp\mcu_cmic_gd32f470vet6.h
